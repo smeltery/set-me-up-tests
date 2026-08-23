@@ -13,7 +13,7 @@ configured provisioning modules. It also verifies `smu update blueprint
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `SMU_BLUEPRINT` | GitHub repo to clone | `dotbrains/set-me-up-blueprint` |
+| `SMU_BLUEPRINT` | GitHub repo to clone | `smeltery/set-me-up-blueprint` |
 | `SMU_BLUEPRINT_BRANCH` | Branch to check out | `master`, `main` |
 
 ### Optional
@@ -34,14 +34,14 @@ configured provisioning modules. It also verifies `smu update blueprint
 | `SMU_EXPECTED_NO_SECRETS` | Assert no secret-like files were materialized under `$SMU_HOME_DIR` | `false` |
 | `SMU_HOME_DIR` | Install directory inside the container | `$HOME/set-me-up` |
 | `SMU_INSTALLER_REF` | Installer GitHub ref used by the bootstrap URL | `main` |
-| `SMU_INSTALLER_URL` | Full installer URL, for candidate branches or forks | `https://raw.githubusercontent.com/dotbrains/set-me-up-installer/$SMU_INSTALLER_REF/install.sh` |
+| `SMU_INSTALLER_URL` | Full installer URL, for candidate branches or forks | `https://raw.githubusercontent.com/smeltery/set-me-up-installer/$SMU_INSTALLER_REF/install.sh` |
 | `SMU_SUBMODULE_SCOPE` | Blueprint submodule scope passed to installer (`all` or `platform`) | `all` |
 
 ## Built-in scenarios
 
 ### `default`
 
-Uses the official `dotbrains/set-me-up-blueprint` on the `master` branch with the `example` module. Idempotency is enabled.
+Uses the official `smeltery/set-me-up-blueprint` on the `master` branch with the `example` module. Idempotency is enabled.
 
 ### `dotfiles`
 
@@ -49,7 +49,7 @@ Uses `nicholasadamou/dotfiles` on `main` with the `base` module. Idempotency is 
 
 ### `vps`, `vps-ubuntu`, and `vps-debian`
 
-Uses the official `dotbrains/set-me-up-blueprint` on the `master` branch with
+Uses the official `smeltery/set-me-up-blueprint` on the `master` branch with
 the `vps` setup profile, which provisions the Debian `server/headless` module.
 This covers the supported headless Ubuntu/Debian VPS path, including a
 DigitalOcean Droplet, without installing workstation packages. The opt-in real

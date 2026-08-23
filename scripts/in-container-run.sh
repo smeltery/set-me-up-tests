@@ -27,7 +27,7 @@ normalize_list() {
 
 installer_url() {
     local ref="${SMU_INSTALLER_REF:-main}"
-    printf "%s\n" "${SMU_INSTALLER_URL:-https://raw.githubusercontent.com/dotbrains/set-me-up-installer/${ref}/install.sh}"
+    printf "%s\n" "${SMU_INSTALLER_URL:-https://raw.githubusercontent.com/smeltery/set-me-up-installer/${ref}/install.sh}"
 }
 
 run_installer() {
