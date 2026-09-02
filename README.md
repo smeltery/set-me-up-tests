@@ -35,9 +35,9 @@ SMU_RUN_REAL_VPS_SMOKE=true ./scripts/validate.sh
 | Scenario | Blueprint | Modules | Platform |
 |----------|-----------|---------|----------|
 | `default` | `smeltery/set-me-up-blueprint` (master) | `example` | Linux (Docker) |
-| `dotfiles` | `nicholasadamou/dotfiles` (main) | `base` | Linux (Docker) |
+| `dotfiles` | `smeltery/set-me-up-blueprint` (master) | `example` | Linux (Docker) |
 | `vps` | `smeltery/set-me-up-blueprint` (master) | `server/headless` | Linux (Docker) |
-| `dotfiles-macos` | `nicholasadamou/dotfiles` (main) | `base` | macOS (native) |
+| `dotfiles-macos` | `smeltery/set-me-up-blueprint` (master) | `example` | macOS (native) |
 | `vps-ubuntu` | `smeltery/set-me-up-blueprint` (master) | `server/headless` | Ubuntu VPS fixture |
 | `vps-debian` | `smeltery/set-me-up-blueprint` (master) | `server/headless` | Debian VPS fixture |
 

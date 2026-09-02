@@ -1,7 +1,7 @@
 # scenario	description	modules	platform	required
 default	Official blueprint smoke scenario	example	docker	true
-dotfiles	User dotfiles Linux scenario	base	docker	false
-dotfiles-macos	User dotfiles native macOS scenario	base	macos	false
+dotfiles	Public blueprint Linux smoke (idempotency off)	example	docker	false
+dotfiles-macos	Public blueprint native macOS smoke (idempotency off)	example	macos	false
 vps	Headless Ubuntu/Debian VPS scenario	server/headless	docker	true
 vps-ubuntu	Headless Ubuntu VPS fixture with rcm preflight	server/headless	docker	true
 vps-debian	Headless Debian VPS fixture with Home Manager preflight	server/headless	docker	true

@@ -43,9 +43,12 @@ configured provisioning modules. It also verifies `smu update blueprint
 
 Uses the official `smeltery/set-me-up-blueprint` on the `master` branch with the `example` module. Idempotency is enabled.
 
-### `dotfiles`
+### `dotfiles` and `dotfiles-macos`
 
-Uses `nicholasadamou/dotfiles` on `main` with the `base` module. Idempotency is disabled (dotfiles are not designed for repeated runs).
+Uses the public `smeltery/set-me-up-blueprint` on `master` with the `example`
+module. Idempotency and update smoke checks are disabled so these jobs stay a
+lightweight second-path smoke (Docker/Linux and native macOS) without depending
+on a private personal blueprint.
 
 ### `vps`, `vps-ubuntu`, and `vps-debian`
 
