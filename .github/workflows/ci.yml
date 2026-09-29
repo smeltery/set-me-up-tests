@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   default-scenario:
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
 
@@ -44,7 +44,7 @@ jobs:
         run: ./scripts/run-scenario.sh default
 
   dotfiles-scenario:
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     needs: [default-scenario]
     steps:
@@ -58,7 +58,7 @@ jobs:
         run: ./scripts/run-scenario.sh dotfiles
 
   vps-scenario:
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     needs: [default-scenario]
     strategy:
       fail-fast: false
@@ -75,7 +75,7 @@ jobs:
         run: ./scripts/run-scenario.sh "${{ matrix.scenario }}"
 
   candidate-scenario:
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     needs: [default-scenario]
     steps:
@@ -88,7 +88,7 @@ jobs:
         run: ./scripts/run-scenario.sh default
 
   dotfiles-macos:
-    runs-on: blacksmith-6vcpu-macos-15
+    runs-on: macos-15
     if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     needs: [default-scenario]
     steps:
@@ -102,7 +102,7 @@ jobs:
 
   flox-smoke-test:
     name: Flox manifest smoke test
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
 
