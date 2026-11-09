@@ -14,9 +14,6 @@ on:
         description: Full installer URL to test
         required: false
         default: ''
-  schedule:
-    - cron: '0 6 * * 1'  # Every Monday at 06:00 UTC
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
